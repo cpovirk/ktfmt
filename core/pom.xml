@@ -16,7 +16,7 @@
 
     <properties>
         <dokka.version>0.10.1</dokka.version>
-        <kotlin.version>1.5.0</kotlin.version>
+        <kotlin.version>1.5.30-RC</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <main.class>com.facebook.ktfmt.MainKt</main.class>
@@ -46,6 +46,7 @@
                             <goal>compile</goal>
                         </goals>
                         <configuration>
+<args><arg>-Xjspecify-annotations=strict</arg></args>
                             <sourceDirs>
                                 <sourceDir>${project.basedir}/src/main/java</sourceDir>
                             </sourceDirs>
@@ -144,7 +145,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>29.0-jre</version>
+            <version>HEAD-jre-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
